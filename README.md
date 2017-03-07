@@ -104,7 +104,9 @@ The first argument corresponds to the path of the file named output_alignment_id
 The second argument is the size of the bin, here 5000 bp. We generally use this resolution for the whole study which is a good compromise between resolution and signa robustness.
 The third argument is the name of the file of the contacts maps. 
 
+The generated picture is and corresponds to the first figure of the manuscript. 
 
+![alt tag](https://github.com/axelcournac/3C_analysis_tools/blob/master/pictures/MAT_RAW.png)
 
 
 
