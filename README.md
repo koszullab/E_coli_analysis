@@ -108,12 +108,10 @@ To plot the contact map and save in various formats, we use the python
 python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
 
-
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
 
 
-
-## Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CID)
+## Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CIDs)
 
 We computed and plotted the Directional Index tool as previously described. 
 
@@ -138,8 +136,9 @@ python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
 
 
-
 #### Misc.
+
+For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
 
 
 
