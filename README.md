@@ -11,6 +11,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Raw data extraction and alignment](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#raw-data-extraction-and-alignment)
 * [Building of the contacts map](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#building-of-the-contacts-map)
 * [Scalogram visualization tool](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#Scalogram)
+* [Ratio of contacts](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#Ratio)
 
 
 ### Dependencies
@@ -118,6 +119,8 @@ python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 
 We computed and plotted the Directional Index tool as previously described. 
 
+
+#### Ratio of contacts between mutant and corresponding WT along the spatial scales 
 
 
 
