@@ -106,7 +106,8 @@ The third argument is the name of the prefixe for the file of the contacts maps.
 
 The generated picture is and corresponds to the first figure of the manuscript. 
 
-![alt tag]()
+![alt tag]( EColi_analysis/pictures/WT_rep1_5000_Natural.png
+)
 
 To plot the contact map and save in various formats, we use the python 
 ```bash
