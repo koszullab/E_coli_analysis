@@ -129,8 +129,9 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 
 #### Ratio of contacts between mutant and corresponding WT along the spatial scales 
 
-
-
+```bash
+python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
+```
 
 
 
