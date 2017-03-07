@@ -93,7 +93,7 @@ We then assigned eahc read to its corresponding restriction fragment as describe
 
 
 
-#### Building of the contacts map
+## Building of the contacts map
 To build the contact map and and filtered the non informative events, we use the python code 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
 ```bash
 python 3Cevents_MATRICE.py output_alignment_idpt.dat.ind3 5000 WT_rep1_5kb
@@ -113,11 +113,11 @@ python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 
 
 
-#### Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CID)
+## Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CID)
 
 We computed and plotted the Directional Index tool as previously described. 
 
-#### Scalogram vizulaisation tool 
+## Scalogram vizulaisation tool 
 
 The scalogram tool allows to vizualise the spreading the dispersion of the contacts signal along the spatial scales. 
 
@@ -127,7 +127,9 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_DOM.jpeg)
 
 
-#### Ratio of contacts between mutant and corresponding WT along the spatial scales 
+## Ratio of contacts between mutant and corresponding WT along the spatial scales 
+We computed the ratio of contacts between mutant and correponding WT by averaging the concacts made at a certain distance for mutant and WT normalised contact maps and then we took the log2 ratio. 
+The computation is implemented in the code [RATIO_CONTACTS_2dtype.py](python_codes/RATIO_CONTACTS_2dtype.py)
 
 ```bash
 python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
