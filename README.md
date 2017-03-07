@@ -50,7 +50,8 @@ A SRA executable called fastq-dump from SRA can be used to extract and split bot
 
 For the alignement step, we will use the sofware Bowtie2 and an iterative procedure like the one of [hiclib] (https://bitbucket.org/mirnylab/hiclib). 
 
-Here, some lines that can be used to do this latter task:
+We process the pairs of reads so that every read has a mapping quality superior to 30. 
+Here, some lines that can be used to do this task:
 
 ```bash
 #  Keeping only the columns of the sam file that contain necessary information:
@@ -75,6 +76,22 @@ awk '{if($1 eq $6 && $5>= 30 && $10 >= 30) print $2,$3,$4,$7,$8,$9}'  p1_p2_merg
 # Removal of intermediar file
 rm p1_p2_merged
 ```
+At this stage, you should have a file containing these information:
+```
+chr1 104180 16 chr1 104057 0
+chr1 3570510 16 chr1 3570450 0
+chr1 4255981 0 chr1 4256104 16
+chr1 159457 16 chr1 159370 0
+chr1 4113710 16 chr1 4113584 0
+chr1 4259849 16 chr1 4259818 0
+chr1 3753874 0 chr1 3754001 16
+chr1 2856270 16 chr1 2856124 0
+chr1 4134782 16 chr1 4134678 0
+```
+
+chr1 corresponds here to the chromosome of *Escherichi coli* genome. We used  MG1655 reference genome (GenBank: U00096.2, total length 4639675). 
+
+We then assigned eahc read to its corresponding restriction fragment and filtered the non informative events as described previously in [https://github.com/axelcournac/3C_tutorial/](https://github.com/axelcournac/3C_tutorial/edit/master/). 
 
 
 
