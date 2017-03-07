@@ -107,14 +107,13 @@ The second argument is the size of the bin, here 5000 bp. We generally use this 
 The third argument is the name of the prefixe for the file of the contacts maps. 
 
 The generated picture is and corresponds to the first figure of the manuscript. 
-
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
-
 To plot the contact map and save in various formats, we use the python 
 ```bash
 python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
 
+
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
 
 
 
