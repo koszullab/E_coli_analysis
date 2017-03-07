@@ -1,4 +1,4 @@
-# Codes and functions for the multiscale analysis of the Escherichia coli 3C data 
+# Codes and functions for the multiscale analysis of the *Escherichia coli* 3C data 
 This page presents and explains the different codes and functions developped for the analysis of 3C data of the organism *Escherichia coli* presented in the article **Cooperation of a condensin complex and nucleoid-associated proteins for the multiscale conformation of a bacterial chromosome** by Virginia S. Lioy, Axel Cournac, Martial Marbouty, Stéphane Duigou, Julien Mozziconacci, Olivier Espéli, Frédéric Boccard, Romain Koszul.
 The codes presented here allow to exactly reproduce the various plots present in the main manuscript and supplementary data. 
 
