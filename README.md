@@ -111,6 +111,13 @@ python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
 
 
+#### Scalogram vizulaisation tool 
+
+
+#### Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CID)
+
+We computed and plotted the Directional Index tool as previously described. 
+
 
 
 
