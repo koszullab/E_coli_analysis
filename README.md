@@ -106,11 +106,11 @@ The third argument is the name of the prefixe for the file of the contacts maps.
 
 The generated picture is and corresponds to the first figure of the manuscript. 
 
-![alt tag](https://github.com/axelcournac/EColi_analysis/pictures/WT_rep1_5000_Natural.png)
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
 
 To plot the contact map and save in various formats, we use the python 
 ```bash
-python plot_mat_temp.py /home/axel/Bureau/bacteries_project/z-python_scripts/mat_temp_WT_rep1_5000.txt WT_rep1_5000
+python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
 
 
