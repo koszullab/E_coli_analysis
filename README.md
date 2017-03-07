@@ -97,17 +97,21 @@ We then assigned eahc read to its corresponding restriction fragment as describe
 
 #### Building of the contacts map
 To build the contact map and and filtered the non informative events, we use the python code 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
-
+```bash
 python 3Cevents_MATRICE.py output_alignment_idpt.dat.ind3 5000 WT_rep1_5kb
-
+```
 The first argument corresponds to the path of the file named output_alignment_idpt.dat.ind3 containing the informations of the mapped pairs of reads. 
 The second argument is the size of the bin, here 5000 bp. We generally use this resolution for the whole study which is a good compromise between resolution and signa robustness.
-The third argument is the name of the file of the contacts maps. 
+The third argument is the name of the prefixe for the file of the contacts maps. 
 
 The generated picture is and corresponds to the first figure of the manuscript. 
 
-![alt tag](https://github.com/axelcournac/3C_analysis_tools/blob/master/pictures/MAT_RAW.png)
+![alt tag]()
 
+To plot the contact map and save in various formats, we use the python 
+```bash
+python plot_mat_temp.py /home/axel/Bureau/bacteries_project/z-python_scripts/mat_temp_WT_rep1_5000.txt WT_rep1_5000
+```
 
 
 
