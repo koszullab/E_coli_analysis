@@ -91,7 +91,7 @@ chr1 4134782 16 chr1 4134678 0
 
 chr1 corresponds here to the chromosome of *Escherichi coli* genome. We used  MG1655 reference genome (GenBank: U00096.2, total length 4639675). 
 
-We then assigned eahc read to its corresponding restriction fragment and filtered the non informative events as described previously in [https://github.com/axelcournac/3C_tutorial/](https://github.com/axelcournac/3C_tutorial/edit/master/). 
+We then assigned eahc read to its corresponding restriction fragment and filtered the non informative events as described previously in [https://github.com/axelcournac/3C_tutorial](https://github.com/axelcournac/3C_tutorial). 
 
 
 
