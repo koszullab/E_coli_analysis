@@ -7,11 +7,11 @@ For queries or help getting these running, you can send email or open an issue a
 
 ### Table of contents
 
-* [Dependencies](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#dependencies)
-* [Raw data extraction and alignment](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#raw-data-extraction-and-alignment)
-* [Building of the contacts map](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#building-of-the-contacts-map)
-* [Scalogram visualization tool](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#Scalogram)
-* [Ratio of contacts](https://github.com/axelcournac/3C_tutorial/blob/master/README.md#Ratio)
+* [Dependencies](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#dependencies)
+* [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
+* [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
+* [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram)
+* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio)
 
 
 ### Dependencies
