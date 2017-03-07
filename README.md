@@ -133,10 +133,11 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 ```
 
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
 
 
 
-
+#### Misc.
 
 
 
