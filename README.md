@@ -1,6 +1,6 @@
 # Codes and functions for the multiscale analysis of the *Escherichia coli* 3C data 
-This page presents and explains the different codes and functions developped for the analysis of 3C data of the organism *Escherichia coli* presented in the article **Cooperation of a condensin complex and nucleoid-associated proteins for the multiscale conformation of a bacterial chromosome** by Virginia S. Lioy, Axel Cournac, Martial Marbouty, Stéphane Duigou, Julien Mozziconacci, Olivier Espéli, Frédéric Boccard, Romain Koszul.
-The codes presented here allow to exactly reproduce the various plots present in the main manuscript and supplementary data. 
+This page presents the different codes and functions developped for the multiscale analysis of 3C data of the organism *Escherichia coli* presented in the article **Cooperation of a condensin complex and nucleoid-associated proteins for the multiscale conformation of a bacterial chromosome** by Virginia S. Lioy, Axel Cournac, Martial Marbouty, Stéphane Duigou, Julien Mozziconacci, Olivier Espéli, Frédéric Boccard, Romain Koszul.
+The codes presented here should allow to exactly reproduce the various plots present in the main manuscript and supplementary data. 
 
 
 For queries or help getting these running, you can send email or open an issue at the github repository.
@@ -11,6 +11,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram)
+* [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality)
 * [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio)
 
 
