@@ -32,8 +32,10 @@ For windows, you can have a look to https://www.python.org/downloads/windows/. T
 #### External programs
 
 * `Bowtie2 ` / [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/index.shtml)
-* 'Pymol' / [Pymol](https://www.pymol.org/)
+* `Pymol` / [Pymol](https://www.pymol.org/)
+* `R` / [R](https://cran.r-project.org/)
 * `Shrec3D` / [Shrec3D](https://sites.google.com/site/julienmozziconacci/)
+
 
 
 ## Raw data extraction and alignment
