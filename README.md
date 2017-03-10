@@ -10,11 +10,11 @@ For queries or help getting these running, you can send email or open an issue a
 * [Dependencies](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#dependencies)
 * [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
-* [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram vizulaisation tool)
-* [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality-Index-at-400-kb-scale-(macrodomains)-and-100-kb-scale-(CIDs))
-* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation-between-transcription-and-3C-contacts)
+* [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#scalogram vizulaisation tool)
+* [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-Index-at-400-kb-scale-(macrodomains)-and-100-kb-scale-(CIDs))
+* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between-transcription-and-3C-contacts)
 * [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3D-structure)
-* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio-of-contacts-between-mutant-and-corresponding-WT-along-the-spatial-scales)
+* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#ratio-of-contacts-between-mutant-and-corresponding-WT-along-the-spatial-scales)
 
 
 ### Dependencies
