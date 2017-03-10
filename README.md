@@ -13,6 +13,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram)
 * [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality)
 * [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation between transcription and 3C contacts)
+* [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3D structure)
 * [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio of contacts between mutant and corresponding WT along the spatial scales )
 
 
@@ -136,6 +137,10 @@ This code generates the following figure:
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C.png)
 
+## 3D structure
+For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
+
+
 ## Ratio of contacts between mutant and corresponding WT along the spatial scales 
 We computed the ratio of contacts between mutant and correponding WT by averaging the concacts made at a certain distance for mutant and WT normalised contact maps and then we took the log2 ratio. 
 The computation is implemented in the code [RATIO_CONTACTS_2dtype.py](python_codes/RATIO_CONTACTS_2dtype.py)
@@ -147,6 +152,5 @@ python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
 
 
-#### Misc.
 
-For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
+
