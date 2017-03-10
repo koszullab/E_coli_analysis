@@ -118,7 +118,7 @@ python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 
 We computed and plotted the Directional Index tool as previously described. 
 
-## Scalogram vizulaisation tool 
+## Scalogram vizulaisation tool
 
 The scalogram tool allows to vizualise the dispersion of the contacts signal along the spatial scales. The functions are implemented in the code [multi_scale_domainogram_FILES2_dom3_3plots.py](python_codes/multi_scale_domainogram_FILES2_dom3_3plots.py)
 
@@ -154,7 +154,4 @@ python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 ```
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
-
-
-
 
