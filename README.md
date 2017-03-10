@@ -139,6 +139,10 @@ This code generates the following figure:
 
 ## 3D structure
 For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
+We use the algorithm Shrec3D with the modification that the lwa to convert contact frequencies into geometricla distance is d=(1/f^0.5).
+We use home made pymol script to generate the 3D picture including the strong contact of the 3C library. 
+
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/EColi_genome_local_constrain252.png)
 
 
 ## Ratio of contacts between mutant and corresponding WT along the spatial scales 
