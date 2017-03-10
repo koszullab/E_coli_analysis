@@ -10,11 +10,11 @@ For queries or help getting these running, you can send email or open an issue a
 * [Dependencies](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#dependencies)
 * [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
-* [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram)
-* [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality)
-* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation between transcription and 3C contacts)
-* [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3D structure)
-* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio of contacts between mutant and corresponding WT along the spatial scales )
+* [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram vizulaisation tool)
+* [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality-Index-at-400-kb-scale-(macrodomains)-and-100-kb-scale-(CIDs))
+* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation-between-transcription-and-3C-contacts)
+* [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3D-structure)
+* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio-of-contacts-between-mutant-and-corresponding-WT-along-the-spatial-scales)
 
 
 ### Dependencies
@@ -44,7 +44,7 @@ Data can be dowloaded on Short Read Archive server at the following address **ht
 A SRA executable called fastq-dump from SRA can be used to extract and split both mates of a library (to use it, you can go with your terminal to the directory containg the executables files by using the bash command cd).Then the program can be used like this:  /fastq-dump library_identification --split-3 -O /path_to_a_directory
 
 ```bash
-./fastq-dump SRR639031 --split-3 -O /run/media/axel/RSG3/IMR90_data/
+./fastq-dump SRR639031 --split-3 -O /run/media/axel/EColi_data/
 ```
 
 #### Alignment
