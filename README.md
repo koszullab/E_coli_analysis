@@ -12,6 +12,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram)
 * [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality)
+* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation)
 * [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio)
 
 
@@ -127,6 +128,14 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 
 The second argument is the prefixe for names of output files.
 
+## Correlation between transcription and 3C contacts
+To put in evidence the correlation bewteen transcription and 3C contacts at short range, we use the python code [correlation_transcription_3C.py](python_codes/correlation_transcription_3C.py)
+
+We use gaussian function to filter both signals and attenuate the fluctuations. 
+This code generates the following figure:
+
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C.png)
+
 ## Ratio of contacts between mutant and corresponding WT along the spatial scales 
 We computed the ratio of contacts between mutant and correponding WT by averaging the concacts made at a certain distance for mutant and WT normalised contact maps and then we took the log2 ratio. 
 The computation is implemented in the code [RATIO_CONTACTS_2dtype.py](python_codes/RATIO_CONTACTS_2dtype.py)
@@ -141,9 +150,3 @@ python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 #### Misc.
 
 For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
-
-
-
-
-
-
