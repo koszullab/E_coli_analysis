@@ -104,7 +104,7 @@ The second argument is the size of the bin, here 5000 bp. We generally use this 
 The third argument is the name of the prefixe for the file of the contacts maps. 
 
 The generated picture is and corresponds to the first figure of the manuscript. 
-To plot the contact map and save in various formats, we use the python 
+To plot the contact map and save in various formats, we use the python code [plot_mat_temp.py](python_codes/plot_mat_temp.py)
 ```bash
 python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
@@ -125,6 +125,7 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 ```
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_DOM.jpeg)
 
+The second argument is the prefixe for names of output files.
 
 ## Ratio of contacts between mutant and corresponding WT along the spatial scales 
 We computed the ratio of contacts between mutant and correponding WT by averaging the concacts made at a certain distance for mutant and WT normalised contact maps and then we took the log2 ratio. 
