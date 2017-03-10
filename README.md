@@ -42,7 +42,7 @@ For windows, you can have a look to https://www.python.org/downloads/windows/. T
 Data can be dowloaded on Short Read Archive server at the following address **http://www.ncbi.nlm.nih.gov/sra**.
 
 A SRA executable called fastq-dump from SRA can be used to extract and split both mates of a library (to use it, you can go with your terminal to the directory containg the executables files by using the bash command cd).Then the program can be used like this:  /fastq-dump library_identification --split-3 -O /path_to_a_directory
-
+ 
 ```bash
 ./fastq-dump SRR639031 --split-3 -O /run/media/axel/EColi_data/
 ```
