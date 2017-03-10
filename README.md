@@ -12,8 +12,8 @@ For queries or help getting these running, you can send email or open an issue a
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Scalogram)
 * [Directionality Index tool tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Directionality)
-* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation)
-* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio)
+* [Correlation between transcription and 3C](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Correlation between transcription and 3C contacts)
+* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#Ratio of contacts between mutant and corresponding WT along the spatial scales )
 
 
 ### Dependencies
