@@ -114,10 +114,6 @@ python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
 
 
-## Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CIDs)
-
-We computed and plotted the Directional Index tool as previously described. 
-
 ## Scalogram vizulaisation tool
 
 The scalogram tool allows to vizualise the dispersion of the contacts signal along the spatial scales. The functions are implemented in the code [multi_scale_domainogram_FILES2_dom3_3plots.py](python_codes/multi_scale_domainogram_FILES2_dom3_3plots.py)
@@ -128,6 +124,10 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_DOM.jpeg)
 
 The second argument is the prefixe for names of output files.
+
+## Directionality Index at 400 kb scale (macrodomains) and 100 kb scale (CIDs)
+
+We computed and plotted the Directional Index tool as previously described. 
 
 ## Correlation between transcription and 3C contacts
 To put in evidence the correlation bewteen transcription and 3C contacts at short range, we use the python code [correlation_transcription_3C.py](python_codes/correlation_transcription_3C.py)
