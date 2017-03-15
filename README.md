@@ -14,7 +14,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Directionality Index](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-index)
 * [Correlation between transcription and 3C contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation)
 * [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3D-structure)
-* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#ratio-of-contacts-between-mutant-and-corresponding-WT-along-the-spatial-scales)
+* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#ratio-of-contacts)
 
 
 ### Dependencies
@@ -146,7 +146,7 @@ We use home made pymol script to generate the 3D picture including the strong co
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/EColi_genome_local_constrain252.png)
 
 
-### Ratio of contacts between mutant and corresponding WT along the spatial scales 
+### Ratio of contacts
 We computed the ratio of contacts between mutant and correponding WT by averaging the concacts made at a certain distance for mutant and WT normalised contact maps and then we took the log2 ratio. 
 The computation is implemented in the code [RATIO_CONTACTS_2dtype.py](python_codes/RATIO_CONTACTS_2dtype.py)
 
