@@ -12,7 +12,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#scalogram-vizulaisation-tool)
 * [Directionality Index](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-index)
-* [Correlation between transcription and contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between)
+* [Correlation between transcription and contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between-transcription-and-contacts)
 * [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3d-structure)
 * [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#ratio-of-contacts)
 
