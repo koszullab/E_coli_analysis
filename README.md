@@ -12,7 +12,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#scalogram-vizulaisation-tool)
 * [Directionality Index](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-index)
-* [Correlation between transcription and 3C contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between)
+* [Correlation between transcription and contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between)
 * [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3d-structure)
 * [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#ratio-of-contacts)
 
@@ -129,7 +129,7 @@ The second argument is the prefixe for names of output files.
 
 We computed at two different scales: at 400 kb scale (macrodomains) and 100 kb scale (CIDs). The computation was done on the correlation matrices (to attenutate fluctuations in the signals) as previously described. 
 
-### Correlation between transcription and 3C contacts
+### Correlation between transcription and contacts
 
 To put in evidence the correlation bewteen transcription and 3C contacts at short range, we use the python code [correlation_transcription_3C.py](python_codes/correlation_transcription_3C.py)
 
