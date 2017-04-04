@@ -10,6 +10,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Dependencies](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#dependencies)
 * [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
+* [Correlation with recombination data](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-with-recombination-data)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#scalogram-vizulaisation-tool)
 * [Directionality Index](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-index)
 * [Correlation between transcription and contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between-transcription-and-contacts)
@@ -124,6 +125,11 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_DOM.jpeg)
 
 The second argument is the prefixe for names of output files.
+
+### Correlation with recombination data
+To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004. We use the python code 
+
+
 
 ### Directionality Index 
 
