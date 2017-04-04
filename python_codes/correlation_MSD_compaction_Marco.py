@@ -19,7 +19,7 @@ import pandas as pd
 # Extraction from Marco data:
 dm=loadtxt("/run/media/axel/RSG3/ECOLI_PROJECT_IN_PROGRESS/data_marco/fig3_MSD_time_condition.txt")
 
-dm=loadtxt("/home/axel/Bureau/fig3_MSD_time_condition_resent.txt")
+#dm=loadtxt("/home/axel/Bureau/fig3_MSD_time_condition_resent.txt")
 #dm[np.isnan(dm)] = 0.0
 
 dm0=dm[0,]
