@@ -10,7 +10,7 @@ For queries or help getting these running, you can send email or open an issue a
 * [Dependencies](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#dependencies)
 * [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
 * [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
-* [Correlation with recombination data](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-with-recombination-data)
+* [Correlation with other data](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-with-other-data)
 * [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#scalogram-vizulaisation-tool)
 * [Directionality Index](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-index)
 * [Correlation between transcription and contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between-transcription-and-contacts)
@@ -126,12 +126,14 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 
 The second argument is the prefixe for names of output files.
 
-### Correlation with recombination data
+### Correlation with other data
 To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004. We use the python code [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/recombination_vs_3C.png)
 
 We use a similar code to confront geometrical distances mesaured from microscopy and the ones extracted from 3D structure built with 3C contacts data: [distance_structure.py](python_codes/distance_structure.py)
+
+To correlate MSD (Mean square Displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_compaction_Marco.py](python_codes/correlation_MSD_compaction_Marco.py)
 
 ### Directionality Index 
 
@@ -141,7 +143,7 @@ We computed at two different scales: at 400 kb scale (macrodomains) and 100 kb s
 
 To put in evidence the correlation bewteen transcription and 3C contacts at short range, we use the python code [correlation_transcription_3C.py](python_codes/correlation_transcription_3C.py)
 
-We use gaussian function to filter both signals and attenuate the fluctuations. 
+We use gaussian function to smooth both signals and attenuate the fluctuations. 
 This code generates the following figure:
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C.png)
