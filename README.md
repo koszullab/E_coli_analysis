@@ -127,13 +127,13 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 The second argument is the prefixe for names of output files.
 
 ### Correlation with other data
-To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004. We use the python code [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
+To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004, we used the python code [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/recombination_vs_3C.png)
 
 We use a similar code to confront geometrical distances mesaured from microscopy and the ones extracted from 3D structure built with 3C contacts data: [distance_structure.py](python_codes/distance_structure.py)
 
-To correlate MSD (Mean square Displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_compaction_Marco.py](python_codes/correlation_MSD_compaction_Marco.py)
+To correlate MSD (Mean square Displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_compaction_Marco.py](python_codes/correlation_MSD_compaction_Marco.py) was used. 
 
 ### Directionality Index 
 
