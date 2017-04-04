@@ -127,9 +127,9 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 The second argument is the prefixe for names of output files.
 
 ### Correlation with recombination data
-To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004. We use the python code 
+To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004. We use the python code [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
 
-
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/recombination_vs_3C.png)
 
 ### Directionality Index 
 
