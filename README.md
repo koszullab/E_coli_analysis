@@ -131,6 +131,8 @@ To correlate 3C contacts and recombination prevuously generated in Valens et al.
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/recombination_vs_3C.png)
 
+We use a similar code to confront geometrical distances mesaured from microscopy and the ones extracted from 3D structure built with 3C contacts data: [distance_structure.py](python_codes/distance_structure.py)
+
 ### Directionality Index 
 
 We computed at two different scales: at 400 kb scale (macrodomains) and 100 kb scale (CIDs). The computation was done on the correlation matrices (to attenutate fluctuations in the signals) as previously described. 
