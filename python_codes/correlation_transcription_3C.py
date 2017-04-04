@@ -40,16 +40,14 @@ plot(b)
 plot(smoothListGaussian(b) )
 
 # transcription data (Rnaseq from Olivier Espeli lab):
-chip=loadtxt("/run/media/axel/9e657c5d-6ac3-494e-81af-b25e389d59bd/vick_data_backup/espeli_data/fastq/EV-4_TGACCA_L002_R1_001.fastq.sam.MQ0.hist5000")
-chip=loadtxt("/run/media/axel/9e657c5d-6ac3-494e-81af-b25e389d59bd/vick_data_backup/espeli_data/fastq/hist_EV-4_TGACCA_L002_R1_001.MQ30.hist5000")
+#chip=loadtxt("/run/media/axel/9e657c5d-6ac3-494e-81af-b25e389d59bd1/vick_data_backup/espeli_data/fastq/EV-4_TGACCA_L002_R1_001.fastq.sam.MQ0.hist5000")
+chip=loadtxt("/run/media/axel/9e657c5d-6ac3-494e-81af-b25e389d59bd1/vick_data_backup/espeli_data/fastq/hist_EV-4_TGACCA_L002_R1_001.MQ30.hist5000")
 plot(log(chip))
 
 # Correlation:
 c=log(chip[:,1])
-
 plot( (b-mean(b))/std(b))
 plot( (c-mean(c))/std(c))
-
 pearsonr(b,c)
 
 # with smoothing the signals:
