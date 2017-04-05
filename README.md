@@ -165,7 +165,7 @@ plt.show();
 ```
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/histo_transcription_olivier.jpeg)
 
-We then computed the genomic distance on the normalised matrice (poor interacting bins were removed during this process) with the following lines of code.
+We then computed the genomic distance on the normalised matrice (poor interacting bins were removed during this process) with the following lines of code:
 ```python 
 import distance_law3
 import scn
