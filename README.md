@@ -168,6 +168,10 @@ plt.show();
 We then computed the genomic distance on the normalised matrice (poor interacting bins were removed during this process) with the following lines of code.
 ```python 
 import distance_law3
+import scn
+
+MAT_INT = loadtxt('mat_temp_WT_fused_4banks_5000.txt')
+matscn1= scn.scn_func(MAT_INT,15000);
 
 # 2)  with rna-seq from Olivier Espeli 
 # very expressed:
