@@ -165,6 +165,50 @@ plt.show();
 ```
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/histo_transcription_olivier.jpeg)
 
+We then computed the genomic distance on the normalised matrice (poor interacting bins were removed during this process) with the following lines of code.
+```python 
+import distance_law3
+
+# 2)  with rna-seq from Olivier Espeli 
+# very expressed:
+indices_highly=np.where( log(chip[:,1]) > 10);
+#indices_highly=indices_highly[0];
+mat_highly= MAT_INT[indices_highly[0],:];
+mat_highly.shape;
+
+dih=distance_law3.dist_law(mat_highly,indices_highly[0]);
+
+# poorly expressed:
+indices_poor=np.where( log(chip[:,1]) < 7);
+#indices_poor=indices_poor[0];
+mat_poor= MAT_INT[indices_poor[0],:];
+mat_poor.shape
+dip=distance_law3.dist_law(mat_poor,indices_poor[0]);
+
+# normaly expressed:
+#indices_norm=np.where( (log(chip) > 6) and (log(chip) < 9) );
+indices_norm = np.where( logical_and( (log(chip[:,1]) > 7) , (log(chip[:,1]) < 10) ) );
+
+#indices_poor=indices_poor[0];
+mat_norm= MAT_INT[indices_norm[0],:];
+mat_norm.shape
+din=distance_law3.dist_law(mat_norm,indices_norm[0]);
+
+plot(dih,color="red",label="very transcribed",linewidth=4.0);
+plot(din,color="blue",label="moderately transcribed",linewidth=4.0);
+plot(dip,color="green",label="poorly transcribed",linewidth=4.0);
+xlabel("Genomic distance (in bins of 5kb)");
+ylabel("Number of reads per possible distance")
+legend();
+grid();
+```
+
+This gives the following graph showing that transcription process increases contacts at short scales.
+
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/dist_laws_transrciption_groups_rnaseq_olivier.jpeg)
+
+
+
 ### 3D structure
 For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
 We use the algorithm Shrec3D with the modification that the lwa to convert contact frequencies into geometricla distance is d=(1/f^0.5).
