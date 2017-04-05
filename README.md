@@ -151,7 +151,7 @@ This code generates the following figure:
 To plot the genomic distance law for different groups of bins classified according to their transcription level, we first compute the distribution of log2 number of reads from the transcriptome for every bins. We divided the bins into 3 groups: poorly expressed bins with transcription level < 7, moderately expressed with transcription level > 7 and < 10 and highly expressed with transcription level > 10. 
 
 ```python 
-chip=loadtxt("/run/media/axel/9e657c5d-6ac3-494e-81af-b25e389d59bd1/vick_data_backup/espeli_data/fastq/hist_EV-4_TGACCA_L002_R1_001.MQ30.hist5000")
+chip=loadtxt("hist_EV-4_TGACCA_L002_R1_001.MQ30.hist5000")
 #plot(log(chip[:,1]) );
 
 c,h,w=my_histo.my_histo( log(chip[:,1]), 100);
