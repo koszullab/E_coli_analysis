@@ -217,6 +217,47 @@ This gives the following graph showing that transcription process increases cont
 For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
 We use the algorithm Shrec3D with the modification that the lwa to convert contact frequencies into geometricla distance is d=(1/f^0.5).
 We use home made pymol script to generate the 3D picture including the strong contacts by adding links between monomers. 
+```python
+bg_color white
+
+#cmd.load("/home/axel/Bureau/script_pymol/3Dcoor_ecoli_5kb_3_2.xyz","mov")
+#cmd.load("/home/axel/Bureau/files_for_shrec3D/3Dcoor_ecoli_3.xyz","mov")
+
+cmd.load("/home/axel/Bureau/files_for_shrec3D/3Dcoor_ecoli_WT_Hiseq_WT_MM_30C_BC164_2.xyz","mov")
+cmd.load("/home/axel/Bureau/files_for_shrec3D/3Dcoor_ecoli_matp_2.xyz","mov")
+
+
+#n = 864
+n = 908
+
+set sphere_scale, 2, (all)
+show sphere
+for idx in range(0,n):cmd.bond('index %s' % str(idx), 'index %s' % str(idx+1))
+# for idx in range(0,n):cmd.unbond('index %s' % str(idx), 'index %s' % str(idx+1))
+
+#inFile = open("/home/axel/Bureau/script_pymol/cumulative3C_200kb.txt", 'r')
+inFile = open("/home/axel/Bureau/files_for_shrec3D/cumulative_signal_200kb_matrice_WT1_for_shreck.txt")
+
+inFile = open("/home/axel/Bureau/files_for_shrec3D/cumulative_signal_200kb_WT_MM_30C_BC164_SCN_despeckled.txt")
+inFile = open("/home/axel/Bureau/files_for_shrec3D/cumulative_signal_200kb_matP.txt01")
+
+# create the global, stored array
+stored.newB = []
+# read the new B factors from file
+for line in inFile.readlines(): stored.newB.append( float(line) )
+# close the input file
+inFile.close()
+# clear out the old B Factors
+alter mov, b=0.0
+# update the B Factors with new properties
+alter mov and n. A, b=stored.newB.pop(0)
+# color the protein based on the new B Factors of the alpha carbons
+cmd.spectrum("b", "blue_white_red", "mov and n. A")
+
+set sphere_scale, 3, (all)
+show sphere
+set_bond stick_radius, 1.0, all
+```
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/EColi_genome_local_constrain252.png)
 
