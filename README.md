@@ -272,3 +272,28 @@ python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
 
+
+To plot on short scales:
+
+```python
+s=s[range(s.shape[0]-1,-1,-1),:];
+s2=s[range(0,8),:];
+extent=(0, 928, 0, 80)
+imshow( s2[range(s2.shape[0]-1,-1,-1),:],interpolation="none", extent=extent, vmin=-1.0, vmax=1.5,cmap="seismic")
+colorbar();
+```
+
+Here an example for the short scales of the ratio of contacts for HNS/WT:
+
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/HNS_zoom.png)
+
+
+
+
+
+
+
+
+
+
+
