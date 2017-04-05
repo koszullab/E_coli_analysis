@@ -146,7 +146,7 @@ To put in evidence the correlation bewteen transcription and 3C contacts at shor
 We use gaussian function to smooth both signals and attenuate the fluctuations. 
 This code generates the following figure:
 
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C.png)
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C_MQ30_3.png)
 
 To plot the genomic distance law for different groups of bins classified according to their transcription level, we first compute the distribution of log2 number of reads from the transcriptome for every bins. We divided the bins into 3 groups: poorly expressed bins with transcription level < 7, moderately expressed with transcription level > 7 and < 10 and highly expressed with transcription level > 10. 
 
