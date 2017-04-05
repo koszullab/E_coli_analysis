@@ -148,6 +148,23 @@ This code generates the following figure:
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C.png)
 
+To plot the genomic distance law for different groups of bins classified according to their transcription level, we first compute the distribution of log2 number of reads from the transcriptome for every bins. We divided the bins into 3 groups: poorly expressed bins with transcription level < 7, moderately expressed with transcription level > 7 and < 10 and highly expressed with transcription level > 10. 
+
+```python 
+chip=loadtxt("/run/media/axel/9e657c5d-6ac3-494e-81af-b25e389d59bd1/vick_data_backup/espeli_data/fastq/hist_EV-4_TGACCA_L002_R1_001.MQ30.hist5000")
+#plot(log(chip[:,1]) );
+
+c,h,w=my_histo.my_histo( log(chip[:,1]), 100);
+plt.bar(c, h, align='center', width=w)
+plt.bar(c[c<7], h[c<7], align='center', width=w,color="green");
+plt.bar(c[c>10], h[c>10], align='center', width=w,color="red");
+
+plt.xlabel("Transcription level (log2 of number of reads)");
+plt.ylabel("Number of occurences (bins of 5kb))");
+plt.show();
+```
+![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/histo_transcription_olivier.jpeg)
+
 ### 3D structure
 For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
 We use the algorithm Shrec3D with the modification that the lwa to convert contact frequencies into geometricla distance is d=(1/f^0.5).
