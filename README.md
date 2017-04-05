@@ -96,7 +96,6 @@ chr1 corresponds here to the chromosome of *Escherichi coli* genome. We used  MG
 We then assigned eahc read to its corresponding restriction fragment as described previously in [https://github.com/axelcournac/3C_tutorial](https://github.com/axelcournac/3C_tutorial). 
 
 
-
 ## Building of the contacts map
 To build the contact map and and filtered the non informative events, we use the python code 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
 ```bash
@@ -111,10 +110,7 @@ To plot the contact map and save in various formats, we use the python code [plo
 ```bash
 python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
-
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
-
-
 ### Scalogram vizulaisation tool
 
 The scalogram tool allows to vizualise the dispersion of the contacts signal along the spatial scales. The functions are implemented in the code [multi_scale_domainogram_FILES2_dom3_3plots.py](python_codes/multi_scale_domainogram_FILES2_dom3_3plots.py)
@@ -206,7 +202,6 @@ ylabel("Number of reads per possible distance")
 legend();
 grid();
 ```
-
 This gives the following graph showing that transcription process increases contacts at short scales.
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/dist_laws_transrciption_groups_rnaseq_olivier.jpeg)
