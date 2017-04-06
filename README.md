@@ -285,10 +285,9 @@ Here an example for the short scales zoom of the ratio of contacts for HNS/WT:
 
 ### Miscellaneous
 
-To plot plasmids contacts signal on the main Escherichia coli genome, we used 100kb bins to avoid fluctuations in the signals and count the number of reads in contact with plasmids. To take into account differences in detectability of the main genome (restriction sites density, mappability), we divided the raw signal of plasmid contacts by the general 3C coverage of the experiment (like in the SCN procedure). This steps allows as well to normalized the effect of replication signal present in the data. 
-To plot the signal centered around matS sites, we adpted the same procedure but binned at 1 kb. We then computed the median of the contact signal of plasmid with all the genomic areas centered around the 23 matS sites (-10 kb and + 10kb). The averaging process on several positions allows to gain in resolution without having much fluctuation. 
-We use the R code [plasmid_genome_norm4.R](R_codes/plasmid_genome_norm4.R).
+To analyse plasmids contacts signal along the main Escherichia coli genome and plot the signal centered around matS sites,
+we used the R code [plasmid_genome_norm4.R](R_codes/plasmid_genome_norm4.R).
 
-
+The enrichment analysis of the CIDs borders was carried out thanks to the R script [borders_statistics5.R](R_codes/borders_statistics5.R).
 
 
