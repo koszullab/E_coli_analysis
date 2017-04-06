@@ -278,17 +278,7 @@ imshow( s2[range(s2.shape[0]-1,-1,-1),:],interpolation="none", extent=extent, vm
 colorbar();
 ```
 
-Here an example for the short scales of the ratio of contacts for HNS/WT:
+Here an example for the short scales zoom of the ratio of contacts for HNS/WT:
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/HNS_zoom.png)
-
-
-
-
-
-
-
-
-
-
 
