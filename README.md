@@ -167,7 +167,7 @@ import distance_law3
 import scn
 
 MAT_INT = loadtxt('mat_temp_WT_fused_4banks_5000.txt')
-matscn1= scn.scn_func(MAT_INT,15000);
+matscn1= scn.scn_func(MAT_INT,100);
 
 # 2)  with rna-seq from Olivier Espeli 
 # very expressed:
