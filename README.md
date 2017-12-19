@@ -36,15 +36,15 @@ Scripts and codes can be run on OS X and other Unix-based systems, and necessita
 ## Raw data extraction and alignment
 #### Data extraction
 
-FASTQ files of the reads were deposited in the NCBI database under the GEO accession number GSE107301. A SRA executable called fastq-dump from SRA can be used to extract and split both reads of pair-end sequences (to use it, you can go with your terminal to the directory contain the executable files by using the bash command cd). Then the program can be used like this: /fastq-dump library_identification --split-3 -O /path_to_a_directory
-
+FASTQ files of the reads were deposited in the NCBI database under the GEO accession number GSE107301. A SRA executable called fastq-dump from SRA can be used to extract and split both reads of pair-end sequences: 
 ```bash
-./fastq-dump SRR639031 --split-3 -O /run/media/axel/EColi_data/
-```
+fastq-dump library_identification --split-3 -O /path_to_a_directory
+```bash
+
 
 #### Alignment
 
-We use the MG1655 reference genome (GenBank: U00096.2, total length 4639675), the program Bowtie2 and an iterative procedure (see for instance the one described in [hiclib] (https://bitbucket.org/mirnylab/hiclib). We process the pairs of reads so that every read has a mapping quality superior to 30. For instance:
+We use the MG1655 reference genome (GenBank: U00096.2, total length 4639675), the program Bowtie2 and an iterative procedure (see for instance the one described in [hiclib] (https://bitbucket.org/mirnylab/hiclib). We process the pairs of reads so only read with a mapping quality > 30 are retained. For instance:
 ```bash
 #  Keeping only the columns of the sam file that contain necessary information:
 awk '{print $1,$3,$4,$2,$5;}' p1.sam > p1.sam.0
@@ -62,7 +62,7 @@ paste p1.sam.0.sorted p2.sam.0.sorted > p1_p2_merged
 rm p1.sam.0.sorted
 rm p2.sam.0.sorted
 
-# Filtering of paires of reads that both have a Mapping Quality above 30
+# Filtering of pairs of reads that both have a Mapping Quality above 30
 awk '{if($1 eq $6 && $5>= 30 && $10 >= 30) print $2,$3,$4,$7,$8,$9}'  p1_p2_merged  > output_alignment_idpt.dat
 
 # Removal of intermediar file
