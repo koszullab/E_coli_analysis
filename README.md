@@ -39,7 +39,7 @@ Scripts and codes can be run on OS X and other Unix-based systems, and necessita
 FASTQ files of the reads were deposited in the NCBI database under the GEO accession number GSE107301. A SRA executable called fastq-dump from SRA can be used to extract and split both reads of pair-end sequences: 
 ```bash
 fastq-dump library_identification --split-3 -O /path_to_a_directory
-```bash
+```
 
 
 #### Alignment
