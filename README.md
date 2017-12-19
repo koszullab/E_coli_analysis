@@ -209,7 +209,7 @@ colorbar();
 
 Here an example for the short scales zoom of the ratio of contacts for HNS/WT:
 
-![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/HNS_zoom.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/h-ns_vs_wt.png)
 
 
 ### Miscellaneous
