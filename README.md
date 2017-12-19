@@ -194,7 +194,7 @@ We computed the ratio of contacts between mutants and the corresponding WT maps 
 python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 ```
 
-![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/ratio_of_contacts.png)
 
 
 To plot on short scales:
