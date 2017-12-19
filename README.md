@@ -101,7 +101,7 @@ The scalogram tool allows to vizualise the dispersion of the contacts signal alo
 ```bash
 python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
-![alt tag](/pictures/Ecolichromosomemap.jpeg)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/recombination_vs_3C.png)
 
 ### Correlation with other data
 To correlate 3C contacts and recombination previously generated in Valens et al., EMBO 2004, we used [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
