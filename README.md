@@ -85,7 +85,7 @@ where chr1 corresponds to *Escherichi coli* genome. Each read is assigned to a r
 
 
 ## Building contacts map
-To build the contact map and filter non-informative events, we use 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
+To build the contact map and filter non-informative events, we use 3Cevents_MATRICE.py [`fragment_attribution.py`](python_codes/fragment_attribution.py):
 ```bash
 
 python fragment_attribution.py /media/axel/RSG3/BACK_UP/axel/Bureau/python/fasta/ecoli/ HpaII output_alignment_idpt_BC76.dat
