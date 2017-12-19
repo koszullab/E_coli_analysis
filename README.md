@@ -44,7 +44,7 @@ fastq-dump library_identification --split-3 -O /path_to_a_directory
 
 #### Alignment
 
-We use the MG1655 reference genome (GenBank: U00096.2, total length 4639675), the program Bowtie2 and an iterative procedure (see for instance the one described in [hiclib] (https://bitbucket.org/mirnylab/hiclib). We process the pairs of reads so only read with a mapping quality > 30 are retained. For instance:
+We use the MG1655 reference genome (GenBank: U00096.2, total length 4639675), the program Bowtie2 and an iterative procedure (see for instance the one described in [DADE] (https://github.com/scovit/dade). We process the pairs of reads so only read with a mapping quality > 30 are retained. For instance:
 ```bash
 #  Keeping only the columns of the sam file that contain necessary information:
 awk '{print $1,$3,$4,$2,$5;}' p1.sam > p1.sam.0
