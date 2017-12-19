@@ -110,7 +110,7 @@ To correlate 3C contacts and recombination previously generated in Valens et al.
 
 We use a similar code to compare the geometrical distances measured from microscopy and the ones extracted from 3D structure built with 3C contacts data:  [distance_structure.py](python_codes/distance_structure.py)
 
-To correlate MSD (mean square displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_compaction_Marco.py](python_codes/correlation_MSD_compaction_Marco.py) was used. 
+To correlate MSD (mean square displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_3C.py](python_codes/correlation_MSD_3C.py) was used. 
 
 ### Directionality Index 
 
