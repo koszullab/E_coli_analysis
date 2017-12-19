@@ -93,7 +93,7 @@ The first argument corresponds to the path of the file “output_alignment_idpt.
 ```bash
 python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_Natural.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/Ecolichromosomemap.jpeg)
 ### Scalogram vizulaisation tool
 
 The scalogram tool allows to vizualise the dispersion of the contacts signal along the spatial scales. The functions are implemented in the code [multi_scale_domainogram_FILES2_dom3_3plots.py](python_codes/multi_scale_domainogram_FILES2_dom3_3plots.py)
