@@ -1,29 +1,23 @@
 # Codes and functions for the multiscale analysis of the *Escherichia coli* 3C data 
-This page presents the different codes and functions developped for the multiscale analysis of 3C data of the organism *Escherichia coli* presented in the article **Functional partition of a bacterial chromosome through the interplay of nucleoid-associated proteins and condensin** by Virginia S. Lioy, Axel Cournac, Martial Marbouty, Stéphane Duigou, Julien Mozziconacci, Olivier Espéli, Frédéric Boccard, Romain Koszul.
-The codes presented here should allow to exactly reproduce the various plots present in the main manuscript and supplementary data. 
-
-
-For queries or help getting these running, you can send email or open an issue at the github repository.
+This page presents the different codes and functions developed to perform the analysis described in the article **Multiscale structuring of the *E. coli* chromosome by nucleoid-associated and condensin proteins** by Virginia S. Lioy, Axel Cournac, et al. The codes presented here should allow to reproduce the different graphs and figures from the main text and the supplementary data. 
 
 ### Table of contents
 
-* [Dependencies](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#dependencies)
-* [Raw data extraction and alignment](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#raw-data-extraction-and-alignment)
-* [Building of the contacts map](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#building-of-the-contacts-map)
-* [Correlation with other data](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-with-other-data)
-* [Scalogram visualization tool](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#scalogram-vizulaisation-tool)
-* [Directionality Index](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#directionality-index)
-* [Correlation between transcription and contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#correlation-between-transcription-and-contacts)
-* [3D structure](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#3d-structure)
-* [Ratio of contacts](https://github.com/axelcournac/EColi_analysis/blob/master/README.md#ratio-of-contacts)
+* [Dependencies](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#dependencies)
+* [Raw data extraction and alignment](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#raw-data-extraction-and-alignment)
+* [Building contacts map](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#building-contacts-map)
+* [Correlation with other data](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#correlation-with-other-data)
+* [Scalogram visualization tool](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#scalogram-vizulaisation-tool)
+* [Directionality Index](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#directionality-index)
+* [Correlation between transcription and contacts](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#correlation-between-transcription-and-contacts)
+* [3D structure](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#3d-structure)
+* [Ratio of contacts](https://github.com/koszullab/E.coli.analysis/blob/master/README.md#ratio-of-contacts)
 
 
 ### Dependencies
 
-Scripts and codes can be run on OS X and other Unix-based systems. It basically requires to have Python installed on your machine which is commonly installed on Unix-based systems. 
-For windows, you can have a look to https://www.python.org/downloads/windows/. Then, a few python modules are necessary for diverses operations on arrays and vizualisation. 
-
-#### Python (>=2.7)
+Scripts and codes can be run on OS X and other Unix-based systems, and necessitate:
+#### *Python (>=2.7)*
 * Numpy
 * Matplotlib (>=1.0)
 * Scipy
@@ -40,21 +34,16 @@ For windows, you can have a look to https://www.python.org/downloads/windows/. T
 
 ## Raw data extraction and alignment
 #### Data extraction
-Data can be dowloaded on Short Read Archive server at the following address **http://www.ncbi.nlm.nih.gov/sra**.
 
-A SRA executable called fastq-dump from SRA can be used to extract and split both mates of a library (to use it, you can go with your terminal to the directory containg the executables files by using the bash command cd).Then the program can be used like this:  /fastq-dump library_identification --split-3 -O /path_to_a_directory
- 
+FASTQ files of the reads were deposited in the NCBI database under the GEO accession number GSE107301. A SRA executable called fastq-dump from SRA can be used to extract and split both reads of pair-end sequences (to use it, you can go with your terminal to the directory contain the executable files by using the bash command cd). Then the program can be used like this: /fastq-dump library_identification --split-3 -O /path_to_a_directory
+
 ```bash
 ./fastq-dump SRR639031 --split-3 -O /run/media/axel/EColi_data/
 ```
 
 #### Alignment
 
-For the alignement step, we will use the sofware Bowtie2 and an iterative procedure like the one of [hiclib] (https://bitbucket.org/mirnylab/hiclib). 
-
-We process the pairs of reads so that every read has a mapping quality superior to 30. 
-Here, some lines that can be used to do this task:
-
+We use the MG1655 reference genome (GenBank: U00096.2, total length 4639675), the program Bowtie2 and an iterative procedure (see for instance the one described in [hiclib] (https://bitbucket.org/mirnylab/hiclib). We process the pairs of reads so that every read has a mapping quality superior to 30. For instance:
 ```bash
 #  Keeping only the columns of the sam file that contain necessary information:
 awk '{print $1,$3,$4,$2,$5;}' p1.sam > p1.sam.0
@@ -78,7 +67,7 @@ awk '{if($1 eq $6 && $5>= 30 && $10 >= 30) print $2,$3,$4,$7,$8,$9}'  p1_p2_merg
 # Removal of intermediar file
 rm p1_p2_merged
 ```
-At this stage, you should have a file containing these information:
+At this stage, you have a file (output_alignment_idpt.dat.ind3) containing these information organized as such:
 ```
 chr1 104180 16 chr1 104057 0
 chr1 3570510 16 chr1 3570450 0
@@ -91,22 +80,15 @@ chr1 2856270 16 chr1 2856124 0
 chr1 4134782 16 chr1 4134678 0
 ```
 
-chr1 corresponds here to the chromosome of *Escherichi coli* genome. We used  MG1655 reference genome (GenBank: U00096.2, total length 4639675). We name this file output_alignment_idpt.dat.ind3.
-
-We then assigned eahc read to its corresponding restriction fragment as described previously in [https://github.com/axelcournac/3C_tutorial](https://github.com/axelcournac/3C_tutorial). 
+where chr1 corresponds to *Escherichi coli* genome. Each read is assigned to a restriction fragment as described in https://github.com/axelcournac/3C_tutorial (Cournac et al., MMiB, 2016).
 
 
-## Building of the contacts map
-To build the contact map and and filtered the non informative events, we use the python code 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
+## Building contacts map
+To build the contact map and filter non-informative events, we use 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
 ```bash
 python 3Cevents_MATRICE.py output_alignment_idpt.dat.ind3 5000 WT_rep1_5kb
 ```
-The first argument corresponds to the path of the file named output_alignment_idpt.dat.ind3 containing the informations of the mapped pairs of reads. 
-The second argument is the size of the bin, here 5000 bp. We generally use this resolution for the whole study which is a good compromise between resolution and signa robustness.
-The third argument is the name of the prefixe for the file of the contacts maps. 
-
-The generated picture is and corresponds to the first figure of the manuscript. 
-To plot the contact map and save in various formats, we use the python code [plot_mat_temp.py](python_codes/plot_mat_temp.py)
+The first argument corresponds to the path of the file “output_alignment_idpt.dat.ind3”, which contains the alignment information. The second argument corresponds to the size of the bin (here: 5,000bp). The third argument is the name of the prefix for the file of the contacts maps. To plot and/or save the contact map, use [plot_mat_temp.py](python_codes/plot_mat_temp.py)
 ```bash
 python plot_mat_temp.py mat_temp_WT_rep1_5000.txt WT_rep1_5000
 ```
@@ -120,32 +102,28 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 ```
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/WT_rep1_5000_DOM.jpeg)
 
-The second argument is the prefixe for names of output files.
-
 ### Correlation with other data
-To correlate 3C contacts and recombination prevuously generated in Valens et al., EMBO 2004, we used the python code [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
+To correlate 3C contacts and recombination previously generated in Valens et al., EMBO 2004, we used [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/recombination_vs_3C.png)
 
-We use a similar code to confront geometrical distances mesaured from microscopy and the ones extracted from 3D structure built with 3C contacts data: [distance_structure.py](python_codes/distance_structure.py)
+We use a similar code to compare the geometrical distances measured from microscopy and the ones extracted from 3D structure built with 3C contacts data:  [distance_structure.py](python_codes/distance_structure.py)
 
-To correlate MSD (Mean square Displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_compaction_Marco.py](python_codes/correlation_MSD_compaction_Marco.py) was used. 
+To correlate MSD (mean square displacements) from time lapse microscopy experiments and cumulative contacts signal, the code [correlation_MSD_compaction_Marco.py](python_codes/correlation_MSD_compaction_Marco.py) was used. 
 
 ### Directionality Index 
 
-We computed at two different scales: at 400 kb scale (macrodomains) and 100 kb scale (CIDs). The computation was done on the correlation matrices (to attenutate fluctuations in the signals) as previously described. 
+We computed at two different scales: at 400 kb scale (macrodomains) and 100 kb scale (CIDs). The computation was done on the correlation matrices (to attenuate fluctuations in the signals) as previously described (Dixon et al., 2012).
 
 ### Correlation between transcription and contacts
 
-To put in evidence the correlation bewteen transcription and 3C contacts at short range, we use the python code [correlation_transcription_3C.py](python_codes/correlation_transcription_3C.py)
+To put in evidence the correlation between transcription and 3C contacts at short range, we use the code  [correlation_transcription_3C.py](python_codes/correlation_transcription_3C.py)
 
-We use gaussian function to smooth both signals and attenuate the fluctuations. 
-This code generates the following figure:
+We use a Gaussian function to smooth both signals. The following graphs are generated with this package:
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C_MQ30_3.png)
 
-To plot the genomic distance law for different groups of bins classified according to their transcription level, we first compute the distribution of log2 number of reads from the transcriptome for every bins. We divided the bins into 3 groups: poorly expressed bins with transcription level < 7, moderately expressed with transcription level > 7 and < 10 and highly expressed with transcription level > 10. 
-
+To plot the frequency of contact as a function of genomic distance for different groups of bins classified according to their transcription level, we first compute the distribution of log2 number of reads from the transcriptome for every bins. We divided the bins into 3 groups: poorly expressed bins with transcription level < 7, moderately expressed with transcription level > 7 and < 10 and highly expressed with transcription level > 10.
 ```python 
 chip=loadtxt("hist_EV-4_TGACCA_L002_R1_001.MQ30.hist5000")
 #plot(log(chip[:,1]) );
@@ -161,7 +139,7 @@ plt.show();
 ```
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/histo_transcription_olivier.jpeg)
 
-We then computed the genomic distance on the normalised matrice (poor interacting bins were removed during this process) with the following lines of code:
+We then computed the genomic distance on the normalized contact maps (poor interacting bins were removed during this process) with:
 ```python 
 import distance_law3
 import scn
@@ -202,64 +180,14 @@ ylabel("Number of reads per possible distance")
 legend();
 grid();
 ```
-This gives the following graph showing that transcription process increases contacts at short scales.
+This gives the following graph.
 
 ![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/dist_laws_transrciption_groups_rnaseq_olivier.jpeg)
 
 
 
-### 3D structure
-For the construction of 3D structure, we processed the matrice by removing the outliers elements. We computed the genomic distance law and removed points outside the mean + 2 std using the function 'filter_dist'.
-We use the algorithm Shrec3D with the modification that the lwa to convert contact frequencies into geometricla distance is d=(1/f^0.5).
-We use home made pymol script to generate the 3D picture including the strong contacts by adding links between monomers. 
-```python
-bg_color white
-
-#cmd.load("/home/axel/Bureau/script_pymol/3Dcoor_ecoli_5kb_3_2.xyz","mov")
-#cmd.load("/home/axel/Bureau/files_for_shrec3D/3Dcoor_ecoli_3.xyz","mov")
-
-cmd.load("/home/axel/Bureau/files_for_shrec3D/3Dcoor_ecoli_WT_Hiseq_WT_MM_30C_BC164_2.xyz","mov")
-cmd.load("/home/axel/Bureau/files_for_shrec3D/3Dcoor_ecoli_matp_2.xyz","mov")
-
-
-#n = 864
-n = 908
-
-set sphere_scale, 2, (all)
-show sphere
-for idx in range(0,n):cmd.bond('index %s' % str(idx), 'index %s' % str(idx+1))
-# for idx in range(0,n):cmd.unbond('index %s' % str(idx), 'index %s' % str(idx+1))
-
-#inFile = open("/home/axel/Bureau/script_pymol/cumulative3C_200kb.txt", 'r')
-inFile = open("/home/axel/Bureau/files_for_shrec3D/cumulative_signal_200kb_matrice_WT1_for_shreck.txt")
-
-inFile = open("/home/axel/Bureau/files_for_shrec3D/cumulative_signal_200kb_WT_MM_30C_BC164_SCN_despeckled.txt")
-inFile = open("/home/axel/Bureau/files_for_shrec3D/cumulative_signal_200kb_matP.txt01")
-
-# create the global, stored array
-stored.newB = []
-# read the new B factors from file
-for line in inFile.readlines(): stored.newB.append( float(line) )
-# close the input file
-inFile.close()
-# clear out the old B Factors
-alter mov, b=0.0
-# update the B Factors with new properties
-alter mov and n. A, b=stored.newB.pop(0)
-# color the protein based on the new B Factors of the alpha carbons
-cmd.spectrum("b", "blue_white_red", "mov and n. A")
-
-set sphere_scale, 3, (all)
-show sphere
-set_bond stick_radius, 1.0, all
-```
-
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/EColi_genome_local_constrain252.png)
-
-
 ### Ratio of contacts
-We computed the ratio of contacts between mutant and correponding WT by averaging the concacts made at a certain distance for mutant and WT normalised contact maps and then we took the log2 ratio. 
-The computation is implemented in the code [RATIO_CONTACTS_2dtype.py](python_codes/RATIO_CONTACTS_2dtype.py)
+We computed the ratio of contacts between mutants and the corresponding WT maps by averaging the contacts made at a certain distance for mutant and WT normalized contact maps and computing their log2 ratio. The computation is implemented in the code [RATIO_CONTACTS_2dtype.py](python_codes/RATIO_CONTACTS_2dtype.py)
 
 ```bash
 python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
@@ -285,8 +213,7 @@ Here an example for the short scales zoom of the ratio of contacts for HNS/WT:
 
 ### Miscellaneous
 
-To analyse plasmids contacts signal along the main Escherichia coli genome and plot the signal centered around matS sites,
-we used the R code [plasmid_genome_norm4.R](R_codes/plasmid_genome_norm4.R).
+To analyze plasmids contacts signal along the main Escherichia coli genome and plot the signal centered on matS sites, we used the R code [plasmid_genome_norm4.R](R_codes/plasmid_genome_norm4.R).
 
 The enrichment analysis of the CIDs borders was carried out thanks to the R script [borders_statistics5.R](R_codes/borders_statistics5.R).
 
