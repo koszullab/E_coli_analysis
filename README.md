@@ -122,7 +122,7 @@ To put in evidence the correlation between transcription and 3C contacts at shor
 
 We use a Gaussian function to smooth both signals. The following graphs are generated with this package:
 
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C_MQ30_3.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/correlation_transcription_rna_olivier_3C_MQ30_3.png)
 
 To plot the frequency of contact as a function of genomic distance for different groups of bins classified according to their transcription level, we first compute the distribution of log2 number of reads from the transcriptome for every bins. We divided the bins into 3 groups: poorly expressed bins with transcription level < 7, moderately expressed with transcription level > 7 and < 10 and highly expressed with transcription level > 10.
 ```python 
@@ -138,7 +138,7 @@ plt.xlabel("Transcription level (log2 of number of reads)");
 plt.ylabel("Number of occurences (bins of 5kb))");
 plt.show();
 ```
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/histo_transcription_olivier.jpeg)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/histo_transcription_olivier.jpeg)
 
 We then computed the genomic distance on the normalized contact maps (poor interacting bins were removed during this process) with:
 ```python 
@@ -183,7 +183,7 @@ grid();
 ```
 This gives the following graph.
 
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/dist_laws_transrciption_groups_rnaseq_olivier.jpeg)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/dist_laws_transrciption_groups_rnaseq_olivier.jpeg)
 
 
 
@@ -194,7 +194,7 @@ We computed the ratio of contacts between mutants and the corresponding WT maps 
 python RATIO_CONTACTS_2dtype.py mat_temp_5000_WT.dat mat_temp_5000_MatP.dat MatP
 ```
 
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/MatP_scalogram_RATIO_2D_GAUSSIAN_2_LOG_SEISMIC.png)
 
 
 To plot on short scales:
@@ -209,7 +209,7 @@ colorbar();
 
 Here an example for the short scales zoom of the ratio of contacts for HNS/WT:
 
-![alt tag](https://github.com/axelcournac/EColi_analysis/blob/master/pictures/HNS_zoom.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/HNS_zoom.png)
 
 
 ### Miscellaneous
