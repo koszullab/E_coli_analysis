@@ -87,7 +87,12 @@ where chr1 corresponds to *Escherichi coli* genome. Each read is assigned to a r
 ## Building contacts map
 To build the contact map and filter non-informative events, we use 3Cevents_MATRICE.py [`3Cevents_MATRICE.py`](python_codes/3Cevents_MATRICE.py):
 ```bash
-python 3Cevents_MATRICE.py output_alignment_idpt.dat.ind3 5000 WT_rep1_5kb
+
+python fragment_attribution.py /media/axel/RSG3/BACK_UP/axel/Bureau/python/fasta/ecoli/ HpaII output_alignment_idpt_BC76.dat
+
+python library_events.py output_alignment_idpt_BC76.dat.indices BC76_MatP
+
+python Matrice_Creator.py output_alignment_idpt_BC76.dat.indices.filtered 5000 BC76_MatP_37C
 ```
 The first argument corresponds to the path of the file “output_alignment_idpt.dat.ind3”, which contains the alignment information. The second argument corresponds to the size of the bin (here: 5,000bp). The third argument is the name of the prefix for the file of the contacts maps. To plot and/or save the contact map, use [plot_mat_temp.py](python_codes/plot_mat_temp.py)
 ```bash
