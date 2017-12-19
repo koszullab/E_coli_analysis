@@ -5,7 +5,6 @@ Created on Wed Jun 22 16:34:40 2016
 """
 from pylab import *
 import scn
-import ice_mirny3
 import triangular_diag
 import scalogram_2d_type
 import matplotlib.gridspec as gridspec
@@ -23,8 +22,8 @@ MAT_BIN = loadtxt(sys.argv[1])
 name = sys.argv[2]
 
 # Normalisation:
-matscn1=ice_mirny3.ice_func(MAT_BIN,0)
-matscn1= scn.scn_func(matscn1,0)
+
+matscn1= scn.scn_func(MAT_BIN,0)
 name = sys.argv[2]
 
 #  PLOTTING MATRIX:
