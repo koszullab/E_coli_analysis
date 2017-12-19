@@ -1,4 +1,5 @@
-# Codes and functions for the multiscale analysis of the *Escherichia coli* 3C data 
+## Codes and functions for the multiscale analysis of the *Escherichia coli* 3C data ##
+
 This page presents the different codes and functions developed to perform the analysis described in the article **Multiscale structuring of the *E. coli* chromosome by nucleoid-associated and condensin proteins** by Virginia S. Lioy, Axel Cournac, et al. The codes presented here should allow to reproduce the different graphs and figures from the main text and the supplementary data. 
 
 ### Table of contents
