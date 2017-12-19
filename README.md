@@ -106,7 +106,7 @@ python multi_scale_domainogram_FILES2_dom3_3plots.py  mat_temp_WT_rep1_5000.txt 
 ### Correlation with other data
 To correlate 3C contacts and recombination previously generated in Valens et al., EMBO 2004, we used [recombination_3C_Correlation.py](python_codes/recombination_3C_Correlation.py)
 
-![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/recombination_vs_3C.png)
+![alt tag](https://github.com/koszullab/E.coli.analysis/blob/master/pictures/recombinationvs3C.png)
 
 We use a similar code to compare the geometrical distances measured from microscopy and the ones extracted from 3D structure built with 3C contacts data:  [distance_structure.py](python_codes/distance_structure.py)
 
